@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Dron/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/layout/log_dialog_view.xml",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Dron/dJISDKLIB/build/intermediates/bundles/debug/res/layout/log_dialog_view.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/hackathon/Dron/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/layout/log_dialog_view.xml",
+        "source": "/Users/martin/Desktop/hackathon/Dron/dJISDKLIB/build/intermediates/bundles/debug/res/layout/log_dialog_view.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/hackathon/Dron/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/layout/dialog_login.xml",
+        "source": "/Users/martin/Desktop/hackathon/Dron/dJISDKLIB/build/intermediates/bundles/debug/res/layout/dialog_login.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Dron/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/layout/dialog_login.xml",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Dron/dJISDKLIB/build/intermediates/bundles/debug/res/layout/dialog_login.xml"
+    }
+]

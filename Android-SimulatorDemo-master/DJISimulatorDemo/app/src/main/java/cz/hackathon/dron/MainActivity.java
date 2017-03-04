@@ -25,6 +25,7 @@ import java.util.TimerTask;
 import dji.common.flightcontroller.DJISimulatorInitializationData;
 import dji.common.flightcontroller.DJISimulatorStateData;
 import dji.common.flightcontroller.DJIVirtualStickFlightControlData;
+import dji.common.flightcontroller.DJIVirtualStickRollPitchControlMode;
 import dji.common.util.DJICommonCallbacks;
 import dji.sdk.flightcontroller.DJIFlightController;
 import dji.common.flightcontroller.DJIFlightControllerDataType;
@@ -46,6 +47,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private ToggleButton mBtnSimulator;
     private Button mBtnTakeOff;
     private Button mBtnLand;
+    private Button mBtnLeft;
+    private Button mBtnRight;
 
     private TextView mTextView;
 
@@ -54,6 +57,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private Timer mSendVirtualStickDataTimer;
     private SendVirtualStickDataTask mSendVirtualStickDataTask;
+    private StopMoveTask mStopMoveTask;
+    private Timer mStopMoveTimer;
 
     private float mPitch;
     private float mRoll;
@@ -172,6 +177,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onDestroy();
     }
 
+    private void sendCommand(float pPitch, float pRoll, float pYaw, float pThrottle, int seconds) {
+        mPitch = pPitch;
+        mRoll = pRoll;
+        mYaw = pYaw;
+        mThrottle = pThrottle;
+
+        if (null == mSendVirtualStickDataTimer) {
+            mSendVirtualStickDataTask = new SendVirtualStickDataTask();
+            mSendVirtualStickDataTimer = new Timer();
+            mSendVirtualStickDataTimer.schedule(mSendVirtualStickDataTask, 0, 200);
+        }
+
+        mStopMoveTask = new StopMoveTask();
+        mStopMoveTimer = new Timer();
+        mStopMoveTimer.schedule(mStopMoveTask, seconds * 1000);
+    }
+
     private void initFlightController() {
 
         DJIAircraft aircraft = DJISimulatorApplication.getAircraftInstance();
@@ -181,6 +203,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             return;
         } else {
             mFlightController = aircraft.getFlightController();
+
+            enableVirtualStick();
+            mFlightController.setRollPitchControlMode(DJIVirtualStickRollPitchControlMode.Velocity);
             mFlightController.getSimulator().setUpdatedSimulatorStateDataCallback(new DJISimulator.UpdatedSimulatorStateDataCallback() {
                 @Override
                 public void onSimulatorDataUpdated(final DJISimulatorStateData djiSimulatorStateData) {
@@ -211,6 +236,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBtnDisableVirtualStick = (Button) findViewById(R.id.btn_disable_virtual_stick);
         mBtnTakeOff = (Button) findViewById(R.id.btn_take_off);
         mBtnLand = (Button) findViewById(R.id.btn_land);
+        mBtnLeft = (Button) findViewById(R.id.btn_left);
+        mBtnRight = (Button) findViewById(R.id.btn_right);
         mBtnSimulator = (ToggleButton) findViewById(R.id.btn_start_simulator);
         mTextView = (TextView) findViewById(R.id.textview_simulator);
         mConnectStatusTextView = (TextView) findViewById(R.id.ConnectStatusTextView);
@@ -221,6 +248,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBtnDisableVirtualStick.setOnClickListener(this);
         mBtnTakeOff.setOnClickListener(this);
         mBtnLand.setOnClickListener(this);
+        mBtnLeft.setOnClickListener(this);
+        mBtnRight.setOnClickListener(this);
 
         mBtnSimulator.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -285,9 +314,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 float pitchJoyControlMaxSpeed = DJIFlightControllerDataType.DJIVirtualStickRollPitchControlMaxVelocity;
                 float rollJoyControlMaxSpeed = DJIFlightControllerDataType.DJIVirtualStickRollPitchControlMaxVelocity;
 
-                mPitch = (float)(pitchJoyControlMaxSpeed * pY);
+                mPitch = (float)(pitchJoyControlMaxSpeed * pY / 4);
 
-                mRoll = (float)(rollJoyControlMaxSpeed * pX);
+                mRoll = (float)(rollJoyControlMaxSpeed * pX / 4);
 
                 if (null == mSendVirtualStickDataTimer) {
                     mSendVirtualStickDataTask = new SendVirtualStickDataTask();
@@ -331,21 +360,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.btn_enable_virtual_stick:
-                if (mFlightController != null){
-                    mFlightController.enableVirtualStickControlMode(
-                            new DJICommonCallbacks.DJICompletionCallback() {
-                                @Override
-                                public void onResult(DJIError djiError) {
-                                    if (djiError != null){
-                                        showToast(djiError.getDescription());
-                                    }else
-                                    {
-                                        showToast("Enable Virtual Stick Success");
-                                    }
-                                }
-                            }
-                    );
-                }
+                enableVirtualStick();
                 break;
 
             case R.id.btn_disable_virtual_stick:
@@ -402,9 +417,33 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 }
 
                 break;
+            case R.id.btn_left:
+                sendCommand(0, -0.5f, 0, 0, 1);
+                break;
+            case R.id.btn_right:
+                sendCommand(0, 0.5f, 0, 0, 1);
+                break;
 
             default:
                 break;
+        }
+    }
+
+    private void enableVirtualStick() {
+        if (mFlightController != null){
+            mFlightController.enableVirtualStickControlMode(
+                    new DJICommonCallbacks.DJICompletionCallback() {
+                        @Override
+                        public void onResult(DJIError djiError) {
+                            if (djiError != null){
+                                showToast(djiError.getDescription());
+                            }else
+                            {
+                                showToast("Enable Virtual Stick Success");
+                            }
+                        }
+                    }
+            );
         }
     }
 
@@ -428,4 +467,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
+    private class StopMoveTask extends TimerTask {
+
+        @Override
+        public void run() {
+            mPitch = 0;
+            mRoll = 0;
+            mYaw = 0;
+            mThrottle = 0;
+            if (null != mSendVirtualStickDataTimer) {
+                mSendVirtualStickDataTask.cancel();
+                mSendVirtualStickDataTask = null;
+                mSendVirtualStickDataTimer.cancel();
+                mSendVirtualStickDataTimer.purge();
+                mSendVirtualStickDataTimer = null;
+            }
+        }
+    }
 }

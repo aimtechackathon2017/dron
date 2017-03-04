@@ -75,6 +75,26 @@
         android:layout_marginTop="0dp"
         android:layout_alignEnd="@+id/btn_start_simulator" />
 
+    <Button
+        android:id="@+id/btn_right"
+        style="@style/common_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_left"
+        android:layout_alignBottom="@+id/btn_left"
+        android:layout_alignEnd="@+id/directionJoystickLeft"
+        android:text="Right"/>
+
+    <Button
+        android:id="@+id/btn_left"
+        style="@style/common_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/btn_disable_virtual_stick"
+        android:layout_alignStart="@+id/btn_disable_virtual_stick"/>
+
     <ToggleButton
         android:id="@+id/btn_start_simulator"
         android:layout_width="wrap_content"

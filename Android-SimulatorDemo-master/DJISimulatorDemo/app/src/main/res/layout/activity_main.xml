@@ -49,9 +49,10 @@
         style="@style/common_button"
         android:id="@+id/btn_enable_virtual_stick"
         android:layout_marginLeft="5dp"
-        android:layout_alignTop="@+id/btn_start_simulator"
+        android:layout_alignBaseline="@+id/btn_start_simulator"
+        android:layout_alignBottom="@+id/btn_start_simulator"
         android:layout_alignStart="@+id/directionJoystickRight"
-        android:layout_marginTop="0dp" />
+        android:layout_marginStart="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -80,20 +81,38 @@
         style="@style/common_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Right"
         android:layout_alignBaseline="@+id/btn_left"
         android:layout_alignBottom="@+id/btn_left"
-        android:layout_alignEnd="@+id/directionJoystickLeft"
-        android:text="Right"/>
+        android:layout_alignEnd="@+id/btn_land"/>
+
+    <Button
+        android:id="@+id/btn_up"
+        style="@style/common_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_down"
+        android:layout_centerHorizontal="true"
+        android:text="Up"/>
 
     <Button
         android:id="@+id/btn_left"
         style="@style/common_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Left"
-        android:layout_marginTop="11dp"
+        android:layout_alignStart="@+id/btn_disable_virtual_stick"
         android:layout_below="@+id/btn_disable_virtual_stick"
-        android:layout_alignStart="@+id/btn_disable_virtual_stick"/>
+        android:layout_marginTop="31dp"
+        android:text="Left"/>
+
+    <Button
+        android:id="@+id/btn_down"
+        style="@style/common_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/directionJoystickLeft"
+        android:layout_alignStart="@+id/btn_up"
+        android:text="Down"/>
 
     <ToggleButton
         android:id="@+id/btn_start_simulator"
@@ -103,10 +122,11 @@
         android:textOff="Start Simulator"
         android:textOn="Stop Simulator"
         style="@style/common_button"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="10dp"
         android:layout_below="@+id/textview_simulator"
         android:layout_toEndOf="@+id/btn_enable_virtual_stick"
-        android:layout_marginTop="107dp"
-        android:layout_marginLeft="10dp" />
+        android:layout_marginStart="11dp"/>
 
     <Button
         android:layout_width="wrap_content"

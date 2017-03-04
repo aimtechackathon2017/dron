@@ -9,7 +9,7 @@ package model;
  *
  * @author Jirka
  */
-public class Pozice {
+public class Pozice implements IPersistableEntry {
 
     @Override
     public String toString() {

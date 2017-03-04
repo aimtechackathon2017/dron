@@ -1,5 +1,6 @@
 package model;
 
+import DronHackContext.Context;
 import java.util.List;
 
 /*
@@ -11,11 +12,13 @@ import java.util.List;
  *
  * @author Jirka
  */
-public class Material {
+public class Material implements IPersistableEntry {
 
     private int id;
     private String nazev;
     private List<Bedna> bedny;
+    
+
 
     @Override
     public String toString() {

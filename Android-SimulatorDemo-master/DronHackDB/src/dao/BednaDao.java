@@ -52,8 +52,11 @@ public class BednaDao extends AbstractDao {
                 );
                 bedna.setPozice(pozice);
                 Material material = MaterialDao.getMaterialById(materialy, resultSet.getInt("materialId"));
-                if (material != null) bedna.setMaterial(material);
-                else System.err.println("Bedna nemá materiál " + bedna.toString()  );
+                if (material != null) {
+                    bedna.setMaterial(material);
+                } else {
+                    System.err.println("Bedna nemá materiál " + bedna.toString());
+                }
                 bedny.add(bedna);
             }
         } catch (SQLException e) {
@@ -67,6 +70,20 @@ public class BednaDao extends AbstractDao {
 
     public List<Bedna> getBednyByMaterial(Material material) {
         return getBedny("SELECT * FROM Materialy WHERE Materialy.id = " + material.getId());
+    }
+
+    @Override
+    public void save(IPersistableEntry p) {
+        if (p instanceof Bedna) {
+            Bedna b = (Bedna) p;
+            Context.bednaDao.commitSQL(
+                    "INSERT INTO Bedny (id, poziceID, materialID, mnozstvi) VALUES ("
+                    + b.getBednaId() + ", "
+                    + b.getPozice().getPoziceId() + ", "
+                    + b.getMaterial().getId() + ", "
+                    + " 1)"
+            );
+        }
     }
 
 }

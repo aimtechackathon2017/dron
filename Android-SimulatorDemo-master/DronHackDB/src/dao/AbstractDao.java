@@ -5,21 +5,43 @@
  */
 package dao;
 
+import DronHackContext.Context;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+import model.Bedna;
+import model.Material;
+import model.Pozice;
+import model.IPersistableEntry;
 
 //import javax.servlet.http.HttpServlet;
-public abstract class AbstractDao {
+public abstract class AbstractDao<T> {
 
     private static final long serialVersionUID = 1L;
 
     private String connectionString;
 
+    void commitSQL(String sqlQuery) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement(sqlQuery);
+            ResultSet resultSet = preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeConnection(connection);
+            closePreparedStatement(preparedStatement);
+        }
+    }
+
     public AbstractDao(String serverUrl, int port, String databaseName, String user, String password) {
-        connectionString = 
-                "jdbc:sqlserver://" + serverUrl + ":" + port + ";"
+        connectionString
+                = "jdbc:sqlserver://" + serverUrl + ":" + port + ";"
                 + "database=" + databaseName + ";"
                 + "user=" + user + ";"
                 + "password=" + password + ";"
@@ -55,4 +77,5 @@ public abstract class AbstractDao {
         }
     }
 
+    public abstract void save(IPersistableEntry p);
 }

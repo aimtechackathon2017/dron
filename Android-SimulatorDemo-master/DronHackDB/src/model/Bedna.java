@@ -10,11 +10,12 @@ package model;
  *
  * @author Jirka
  */
-public class Bedna {
+public class Bedna implements IPersistableEntry {
 
     private int bednaId;    
     private Pozice pozice;
     private Material material;
+       
     
     @Override
     public String toString() {

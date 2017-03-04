@@ -5,12 +5,14 @@
  */
 package dao;
 
+import DronHackContext.Context;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
+import model.IPersistableEntry;
 import model.Material;
 
 public class MaterialDao extends AbstractDao {
@@ -49,11 +51,24 @@ public class MaterialDao extends AbstractDao {
     }
 
     public static Material getMaterialById(List<Material> materialy, int id) {
-        for(Material m : materialy)
+        for (Material m : materialy) {
             if (m.getId() == id) {
                 return m;
             }
+        }
         return null;
     }
-    
+
+    @Override    
+    public void save(IPersistableEntry p) {
+        if (p instanceof Material) {
+            Material m = (Material)p;
+            Context.materialDao.commitSQL(
+                    "INSERT INTO Materialy (id, nazev) VALUES ("
+                    + m.getId() + ", "
+                    + m.getNazev() + ")"
+            );
+        }
+    }
+
 }

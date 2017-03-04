@@ -96,14 +96,54 @@
         android:text="Up"/>
 
     <Button
+        android:id="@+id/btn_front"
+        style="@style/common_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Front"
+        android:layout_above="@+id/btn_up"
+        android:layout_marginBottom="11dp"
+        android:layout_alignStart="@+id/btn_up"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/common_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_down"
+        android:layout_below="@+id/btn_down"
+        android:layout_marginTop="11dp"
+        android:text="Back"/>
+
+    <Button
         android:id="@+id/btn_left"
         style="@style/common_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Left"
+        android:layout_above="@+id/directionJoystickRight"
         android:layout_alignStart="@+id/btn_disable_virtual_stick"
-        android:layout_below="@+id/btn_disable_virtual_stick"
-        android:layout_marginTop="31dp"
-        android:text="Left"/>
+        android:layout_marginBottom="27dp"/>
+
+    <Button
+        android:id="@+id/btn_left_yaw"
+        style="@style/common_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left YAW"
+        android:layout_alignBaseline="@+id/btn_right_yaw"
+        android:layout_alignBottom="@+id/btn_right_yaw"
+        android:layout_alignEnd="@+id/directionJoystickRight"
+        android:layout_marginEnd="11dp"/>
+
+    <Button
+        android:id="@+id/btn_right_yaw"
+        style="@style/common_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_right"
+        android:layout_toEndOf="@+id/btn_take_off"
+        android:text="Right YAW"/>
 
     <Button
         android:id="@+id/btn_down"

@@ -23,11 +23,15 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import dji.common.error.DJIError;
+import dji.common.flightcontroller.DJIFlightControllerControlMode;
 import dji.common.flightcontroller.DJIFlightControllerDataType;
+import dji.common.flightcontroller.DJIFlightOrientationMode;
 import dji.common.flightcontroller.DJISimulatorInitializationData;
 import dji.common.flightcontroller.DJISimulatorStateData;
 import dji.common.flightcontroller.DJIVirtualStickFlightControlData;
 import dji.common.flightcontroller.DJIVirtualStickRollPitchControlMode;
+import dji.common.flightcontroller.DJIVirtualStickVerticalControlMode;
+import dji.common.flightcontroller.DJIVirtualStickYawControlMode;
 import dji.common.remotecontroller.DJIRCControlMode;
 import dji.common.remotecontroller.DJIRCControlStyle;
 import dji.common.util.DJICommonCallbacks;
@@ -51,8 +55,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mBtnLand;
     private Button mBtnLeft;
     private Button mBtnRight;
+    private Button mBtnLeftYaw;
+    private Button mBtnRightYaw;
     private Button mBtnUp;
     private Button mBtnDown;
+    private Button mBtnFront;
+    private Button mBtnBack;
 
     private TextView mTextView;
 
@@ -193,6 +201,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
             mSendVirtualStickDataTimer.schedule(mSendVirtualStickDataTask, 0, 200);
         }
 
+        if (null != mStopMoveTimer) {
+            mStopMoveTask.cancel();
+            mStopMoveTask = null;
+            mStopMoveTimer.cancel();
+            mStopMoveTimer.purge();
+            mStopMoveTimer = null;
+        }
+
         mStopMoveTask = new StopMoveTask();
         mStopMoveTimer = new Timer();
         mStopMoveTimer.schedule(mStopMoveTask, seconds * 1000);
@@ -211,7 +227,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             aircraft.getRemoteController().getRCControlMode(new DJICommonCallbacks.DJICompletionCallbackWith<DJIRCControlMode>() {
                 @Override
                 public void onSuccess(DJIRCControlMode djircControlMode) {
-                    djircControlMode.controlStyle = DJIRCControlStyle.Chinese;
+                    djircControlMode.controlStyle = DJIRCControlStyle.Custom;
                     showToast("Control mode:" + djircControlMode.controlStyle);
                 }
                 @Override
@@ -222,7 +238,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
             });
 
             enableVirtualStick();
-            mFlightController.setRollPitchControlMode(DJIVirtualStickRollPitchControlMode.Velocity);
             mFlightController.getSimulator().setUpdatedSimulatorStateDataCallback(new DJISimulator.UpdatedSimulatorStateDataCallback() {
                 @Override
                 public void onSimulatorDataUpdated(final DJISimulatorStateData djiSimulatorStateData) {
@@ -255,8 +270,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBtnLand = (Button) findViewById(R.id.btn_land);
         mBtnLeft = (Button) findViewById(R.id.btn_up);
         mBtnRight = (Button) findViewById(R.id.btn_right);
+        mBtnLeftYaw = (Button) findViewById(R.id.btn_left_yaw);
+        mBtnRightYaw = (Button) findViewById(R.id.btn_right_yaw);
         mBtnUp = (Button) findViewById(R.id.btn_up);
         mBtnDown= (Button) findViewById(R.id.btn_down);
+        mBtnFront = (Button) findViewById(R.id.btn_front);
+        mBtnBack= (Button) findViewById(R.id.btn_back);
         mBtnSimulator = (ToggleButton) findViewById(R.id.btn_start_simulator);
         mTextView = (TextView) findViewById(R.id.textview_simulator);
         mConnectStatusTextView = (TextView) findViewById(R.id.ConnectStatusTextView);
@@ -269,8 +288,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBtnLand.setOnClickListener(this);
         mBtnLeft.setOnClickListener(this);
         mBtnRight.setOnClickListener(this);
+        mBtnLeftYaw.setOnClickListener(this);
+        mBtnRightYaw.setOnClickListener(this);
         mBtnUp.setOnClickListener(this);
         mBtnDown.setOnClickListener(this);
+        mBtnFront.setOnClickListener(this);
+        mBtnBack.setOnClickListener(this);
 
         mBtnSimulator.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -438,17 +461,29 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 }
 
                 break;
+            case R.id.btn_left_yaw:
+                sendCommand(0, 0, mYaw-5, 0, 3);
+                break;
+            case R.id.btn_right_yaw:
+                sendCommand(0, 0, mYaw+5, 0, 3);
+                break;
             case R.id.btn_left:
-                sendCommand(0, -0.5f, 0, 0, 1);
+                sendCommand(-0.5f, 0, 0, 0.1f, 3);
                 break;
             case R.id.btn_right:
-                sendCommand(0, 0.5f, 0, 0, 1);
+                sendCommand(0.5f, 0, 0, 0.1f, 3);
                 break;
             case R.id.btn_up:
-                sendCommand(0, 0, 0, -1, 1);
+                sendCommand(0, 0, 0, 0.5f, 3);
                 break;
             case R.id.btn_down:
-                sendCommand(0, 0, 0, 1, 1);
+                sendCommand(0, 0, 0, -0.5f, 3);
+                break;
+            case R.id.btn_front:
+                sendCommand(0, 0.5f, 0, 0, 3);
+                break;
+            case R.id.btn_back:
+                sendCommand(0, -0.5f, 0, 0, 3);
                 break;
 
             default:
@@ -480,6 +515,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
         public void run() {
 
             if (mFlightController != null) {
+                mFlightController.setFlightOrientationMode(DJIFlightOrientationMode.DefaultAircraftHeading, new DJICommonCallbacks.DJICompletionCallback() {
+                    @Override
+                    public void onResult(DJIError djiError) {
+                        showToast("Can not set AircraftHeading mode: " + djiError.getDescription());
+                    }
+                });
+                mFlightController.setRollPitchControlMode(DJIVirtualStickRollPitchControlMode.Velocity);
+                mFlightController.setYawControlMode(DJIVirtualStickYawControlMode.Angle);
+                mFlightController.setVerticalControlMode(DJIVirtualStickVerticalControlMode.Velocity);
+                mFlightController.setVirtualStickAdvancedModeEnabled(true);
+                mFlightController.setControlMode(DJIFlightControllerControlMode.Manual, new DJICommonCallbacks.DJICompletionCallback() {
+                    @Override
+                    public void onResult(DJIError djiError) {
+
+                    }
+                });
+
                 mFlightController.sendVirtualStickFlightControlData(
                         new DJIVirtualStickFlightControlData(
                                 mPitch, mRoll, mYaw, mThrottle

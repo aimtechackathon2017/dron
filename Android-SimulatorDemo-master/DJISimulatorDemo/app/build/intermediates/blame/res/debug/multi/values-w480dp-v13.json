@@ -1,0 +1,45 @@
+[
+    {
+        "outputFile": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-v13/values-w480dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 61,
+                    "endOffset": 112
+                },
+                "from": {
+                    "file": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/values-w480dp-v13/values-w480dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 61,
+                        "endOffset": 112
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 117,
+                    "endColumn": 71,
+                    "endOffset": 184
+                },
+                "from": {
+                    "file": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/values-w480dp-v13/values-w480dp-v13.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 117,
+                        "endColumn": 71,
+                        "endOffset": 184
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/okhttp-3.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="03773badcb9e99ad699db657fa0e20cafbf774ef">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/okhttp-3.2.0_8996f94ee8db803a38c63f08002502c73579ad3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/dji-sdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1caeea6670e86792065a293010f09555d21d05e8">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/dji-sdk_3303ee4adc51044f47c3d175d6ffb62cd959f982.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/rxjava-1.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d4f11e8e7dd89f5f87e5d81000582eabb071da91">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/rxjava-1.1.2_33a34e591a2971711ae70fae9d64b0d88d0746ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/rxandroid-1.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="92b4c46bf73b1caff27f0ad2b73fcd5730fa37de">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/rxandroid-1.1.0_8276b4d24a4b6c36656750c530a70c65fe3b873b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/sqlbrite-0.6.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="80411084d9962ab5b48b274bb4b49e063095535a">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/sqlbrite-0.6.2_4a7c055e93d3c8c87cff372ef0bcc6a18e4743d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/.android/build-cache/44e0e3393a674c6fc4e4099e8299c6c4e201d662/output/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_e235d6138c9e98d66444564af71aa81d37630e38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/.android/build-cache/dc0eaa0c8b168a95403a221ef2118fd8c0872557/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/classes_31bfddd4954845bf18a8ab45703bab2ba56b7a1b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/okio-1.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="58a92147e3365aa0039fc81a31b87f4957e6a555">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/okio-1.7.0_e09fcc3c0ca3448cacd2151089ce71fdc8783ea4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f669566d97545b914257e8dac4c87f287e0d5802">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/classes_879b7d99548ce50f897d74c0d6a47d92a410fbba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/.android/build-cache/64cd273f9798f5c56fac3416b4809437d39e3b0a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/classes_9bb7a8654d6c0b1169068edc07f0cc43cf192c8a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/retrofit-2.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b55150f9b025eebdddb6426bb4e85e673af338a3">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/retrofit-2.0.1_891af3018c2e2d6f29ef0e3ec6e693623fc931a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/classes_01b34193773fddcfc9105ace94444c580124a753.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/dji_gson.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="729a9cf81838d286b6098dc9c33d264d5db48a26">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/dji_gson_a88c758972b5a996c64a3f44d1822836ad48de36.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_9e7891cb089ccc51e8a757bec371dc414d448828.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.2/f1bc476cc167b18e66c297df599b2377131a8947/gson-2.6.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f1bc476cc167b18e66c297df599b2377131a8947">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/gson-2.6.2_83d4579805307ebc11ee937bbe0be1a75d779e4b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/rxjava-computation-expressions-0.21.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1998e4f447fbf0194f39a12f3010d1f4f598667f">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/rxjava-computation-expressions-0.21.1_ebc9353d25b7a3a07144f748eb6e09b17702f613.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/converter-gson-2.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="56caaeea09d3e406f6160972ff5d3e6c0e6f139b">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.1_53c5e2d1e1a4c28fda2f60be9b0377244d910e37.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/.android/build-cache/44e0e3393a674c6fc4e4099e8299c6c4e201d662/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/classes_14b9928225de28aca800a079e2775d5da6272745.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/libs/dji_eventbus.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="91a5399115cedf41ebd53be7c96e424ac3aed1a8">
+        <dex dex="/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/pre-dexed/debug/dji_eventbus_2aa4f7b2fd959ee0cebae33f3d08b788bf072dd1.jar" />
+    </item>
+
+</items>

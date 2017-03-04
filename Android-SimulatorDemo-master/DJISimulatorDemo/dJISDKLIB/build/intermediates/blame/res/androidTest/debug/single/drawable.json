@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/drawable/btn_lock_selector.xml",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/debug/res/drawable/btn_lock_selector.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/drawable/ic_launcher.png",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/debug/res/drawable/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/drawable/radio_checked.png",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/debug/res/drawable/radio_checked.png"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/drawable/radio_unchecked.png",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/debug/res/drawable/radio_unchecked.png"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/drawable/btn_zoom_selector.xml",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/debug/res/drawable/btn_zoom_selector.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/drawable/btn_radio_selector.xml",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/debug/res/drawable/btn_radio_selector.xml"
+    }
+]

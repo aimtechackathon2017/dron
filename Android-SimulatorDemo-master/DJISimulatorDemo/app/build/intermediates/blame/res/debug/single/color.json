@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/res/color/abc_secondary_text_material_dark.xml"
+    }
+]

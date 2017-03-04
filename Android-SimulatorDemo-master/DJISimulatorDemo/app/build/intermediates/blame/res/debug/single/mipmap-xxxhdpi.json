@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/joystick.png",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/res/mipmap-xxxhdpi/joystick.png"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/joystick_bg.png",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/res/mipmap-xxxhdpi/joystick_bg.png"
+    },
+    {
+        "merged": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    }
+]

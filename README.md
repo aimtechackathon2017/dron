@@ -1,2 +1,0 @@
-# dron
-Voice Control Dron

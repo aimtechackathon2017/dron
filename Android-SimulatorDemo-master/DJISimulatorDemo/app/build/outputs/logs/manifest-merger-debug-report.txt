@@ -1,0 +1,164 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:2:1-73:12
+	package
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:6:5-68
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:6:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:7:5-74
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:7:22-71
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:8:22-63
+uses-permission#android.permission.INTERNET
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:10:22-73
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:11:22-65
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:12:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:13:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:14:22-76
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:15:5-76
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:15:22-73
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:16:5-84
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:16:22-81
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:17:5-81
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:17:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:18:5-80
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:18:22-77
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:19:22-75
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:20:5-75
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:20:22-72
+uses-feature#android.hardware.usb.host
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:22:5-24:36
+	android:required
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:24:9-33
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:23:9-49
+uses-feature#android.hardware.usb.accessory
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:25:5-27:35
+	android:required
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:27:9-32
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:26:9-54
+application
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:31:5-71:19
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/martin/.android/build-cache/dc0eaa0c8b168a95403a221ef2118fd8c0872557/output/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/martin/.android/build-cache/64cd273f9798f5c56fac3416b4809437d39e3b0a/output/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/martin/.android/build-cache/44e0e3393a674c6fc4e4099e8299c6c4e201d662/output/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:35:9-41
+	android:supportsRtl
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:36:9-35
+	android:allowBackup
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:33:9-35
+	android:icon
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:34:9-43
+	android:theme
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:37:9-40
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:32:9-65
+meta-data#com.dji.sdk.API_KEY
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:44:9-46:56
+	android:value
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:46:13-53
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:45:13-47
+service#dji.sdk.sdkmanager.DJIGlobalService
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:48:9-49:19
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:48:18-68
+activity#dji.sdk.sdkmanager.DJIAoaControllerActivity
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:51:9-61:20
+	android:theme
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:53:13-61
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:52:13-71
+intent-filter#android.hardware.usb.action.USB_ACCESSORY_ATTACHED
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:54:13-56:29
+action#android.hardware.usb.action.USB_ACCESSORY_ATTACHED
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:55:17-93
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:55:25-90
+meta-data#android.hardware.usb.action.USB_ACCESSORY_ATTACHED
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:58:13-60:60
+	android:resource
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:60:17-57
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:59:17-82
+activity#cz.hackathon.dron.MainActivity
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:63:9-70:20
+	android:screenOrientation
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:64:13-49
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:63:19-64
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:65:13-69:29
+action#android.intent.action.MAIN
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:66:17-69
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:66:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:68:17-77
+	android:name
+		ADDED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml:68:27-74
+uses-sdk
+INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/martin/.android/build-cache/dc0eaa0c8b168a95403a221ef2118fd8c0872557/output/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/martin/.android/build-cache/64cd273f9798f5c56fac3416b4809437d39e3b0a/output/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/martin/.android/build-cache/44e0e3393a674c6fc4e4099e8299c6c4e201d662/output/AndroidManifest.xml:20:5-43
+MERGED from [DJISimulatorDemo:dJISDKLIB:unspecified] /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/dJISDKLIB/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.3.0] /Users/martin/.android/build-cache/41d0205394ebbaa858e575adbf55ea1a8d435690/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/martin/Desktop/git_hackethon/dron/Android-SimulatorDemo-master/DJISimulatorDemo/app/src/main/AndroidManifest.xml

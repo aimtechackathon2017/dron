@@ -423,72 +423,108 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     );
                 }
                 break;
-
             case R.id.btn_take_off:
-                if (mFlightController != null){
-                    mFlightController.takeOff(
-                            new DJICommonCallbacks.DJICompletionCallback() {
-                                @Override
-                                public void onResult(DJIError djiError) {
-                                    if (djiError != null) {
-                                        showToast(djiError.getDescription());
-                                    } else {
-                                        showToast("Take off Success");
-                                    }
-                                }
-                            }
-                    );
-                }
-
+                takeOff();
                 break;
-
             case R.id.btn_land:
-                if (mFlightController != null){
-
-                    mFlightController.autoLanding(
-                            new DJICommonCallbacks.DJICompletionCallback() {
-                                @Override
-                                public void onResult(DJIError djiError) {
-                                    if (djiError != null) {
-                                        showToast(djiError.getDescription());
-                                    } else {
-                                        showToast("AutoLand Started");
-                                    }
-                                }
-                            }
-                    );
-
-                }
-
+                autoLanding();
                 break;
             case R.id.btn_left_yaw:
-                sendCommand(0, 0, mYaw-5, 0, 3);
+                sendCommandLeftYaw(3);
                 break;
             case R.id.btn_right_yaw:
-                sendCommand(0, 0, mYaw+5, 0, 3);
+                sendCommandRightYaw(3);
                 break;
             case R.id.btn_left:
-                sendCommand(-0.5f, 0, 0, 0.1f, 3);
+                sendCommandLeft(3);
                 break;
             case R.id.btn_right:
-                sendCommand(0.5f, 0, 0, 0.1f, 3);
+                sendCommandRight(3);
                 break;
             case R.id.btn_up:
-                sendCommand(0, 0, 0, 0.5f, 3);
+                sendCommandUp(3, 0.5f);
                 break;
             case R.id.btn_down:
-                sendCommand(0, 0, 0, -0.5f, 3);
+                sendCommandDown(3, 0.5f);
                 break;
             case R.id.btn_front:
-                sendCommand(0, 0.5f, 0, 0, 3);
+                sendCommandFront(3);
                 break;
             case R.id.btn_back:
-                sendCommand(0, -0.5f, 0, 0, 3);
+                sendCommandBack(3);
                 break;
 
             default:
                 break;
         }
+    }
+
+    private void autoLanding() {
+        if (mFlightController != null){
+
+            mFlightController.autoLanding(
+                    new DJICommonCallbacks.DJICompletionCallback() {
+                        @Override
+                        public void onResult(DJIError djiError) {
+                            if (djiError != null) {
+                                showToast(djiError.getDescription());
+                            } else {
+                                showToast("AutoLand Started");
+                            }
+                        }
+                    }
+            );
+
+        }
+    }
+
+    private void takeOff() {
+        if (mFlightController != null){
+            mFlightController.takeOff(
+                    new DJICommonCallbacks.DJICompletionCallback() {
+                        @Override
+                        public void onResult(DJIError djiError) {
+                            if (djiError != null) {
+                                showToast(djiError.getDescription());
+                            } else {
+                                showToast("Take off Success");
+                            }
+                        }
+                    }
+            );
+        }
+    }
+
+    private void sendCommandBack(int seconds) {
+        sendCommand(0, -0.5f, 0, 0, seconds);
+    }
+
+    private void sendCommandFront(int seconds) {
+        sendCommand(0, 0.5f, 0, 0, seconds);
+    }
+
+    private void sendCommandDown(int seconds, float metersPerSecond) {
+        sendCommand(0, 0, 0, -metersPerSecond, seconds);
+    }
+
+    private void sendCommandUp(int seconds, float metersPerSecond) {
+        sendCommand(0, 0, 0, metersPerSecond, seconds);
+    }
+
+    private void sendCommandRight(int seconds) {
+        sendCommand(0.5f, 0, 0, 0.1f, seconds);
+    }
+
+    private void sendCommandLeft(int seconds) {
+        sendCommand(-0.5f, 0, 0, 0.1f, seconds);
+    }
+
+    private void sendCommandRightYaw(int seconds) {
+        sendCommand(0, 0, mYaw+5, 0, seconds);
+    }
+
+    private void sendCommandLeftYaw(int seconds) {
+        sendCommand(0, 0, mYaw-5, 0, seconds);
     }
 
     private void enableVirtualStick() {

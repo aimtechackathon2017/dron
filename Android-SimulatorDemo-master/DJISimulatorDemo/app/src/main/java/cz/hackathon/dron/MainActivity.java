@@ -6,11 +6,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Build;
 import android.support.v4.app.ActivityCompat;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,17 +22,19 @@ import android.widget.ToggleButton;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import dji.common.error.DJIError;
+import dji.common.flightcontroller.DJIFlightControllerDataType;
 import dji.common.flightcontroller.DJISimulatorInitializationData;
 import dji.common.flightcontroller.DJISimulatorStateData;
 import dji.common.flightcontroller.DJIVirtualStickFlightControlData;
 import dji.common.flightcontroller.DJIVirtualStickRollPitchControlMode;
+import dji.common.remotecontroller.DJIRCControlMode;
+import dji.common.remotecontroller.DJIRCControlStyle;
 import dji.common.util.DJICommonCallbacks;
+import dji.sdk.base.DJIBaseProduct;
 import dji.sdk.flightcontroller.DJIFlightController;
-import dji.common.flightcontroller.DJIFlightControllerDataType;
 import dji.sdk.flightcontroller.DJISimulator;
 import dji.sdk.products.DJIAircraft;
-import dji.sdk.base.DJIBaseProduct;
-import dji.common.error.DJIError;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -49,6 +51,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mBtnLand;
     private Button mBtnLeft;
     private Button mBtnRight;
+    private Button mBtnUp;
+    private Button mBtnDown;
 
     private TextView mTextView;
 
@@ -204,6 +208,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
         } else {
             mFlightController = aircraft.getFlightController();
 
+            aircraft.getRemoteController().getRCControlMode(new DJICommonCallbacks.DJICompletionCallbackWith<DJIRCControlMode>() {
+                @Override
+                public void onSuccess(DJIRCControlMode djircControlMode) {
+                    djircControlMode.controlStyle = DJIRCControlStyle.Chinese;
+                    showToast("Control mode:" + djircControlMode.controlStyle);
+                }
+                @Override
+                public void onFailure(DJIError djiError) {
+                    showToast("Control mode error:" + djiError.getDescription());
+
+                }
+            });
+
             enableVirtualStick();
             mFlightController.setRollPitchControlMode(DJIVirtualStickRollPitchControlMode.Velocity);
             mFlightController.getSimulator().setUpdatedSimulatorStateDataCallback(new DJISimulator.UpdatedSimulatorStateDataCallback() {
@@ -236,8 +253,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBtnDisableVirtualStick = (Button) findViewById(R.id.btn_disable_virtual_stick);
         mBtnTakeOff = (Button) findViewById(R.id.btn_take_off);
         mBtnLand = (Button) findViewById(R.id.btn_land);
-        mBtnLeft = (Button) findViewById(R.id.btn_left);
+        mBtnLeft = (Button) findViewById(R.id.btn_up);
         mBtnRight = (Button) findViewById(R.id.btn_right);
+        mBtnUp = (Button) findViewById(R.id.btn_up);
+        mBtnDown= (Button) findViewById(R.id.btn_down);
         mBtnSimulator = (ToggleButton) findViewById(R.id.btn_start_simulator);
         mTextView = (TextView) findViewById(R.id.textview_simulator);
         mConnectStatusTextView = (TextView) findViewById(R.id.ConnectStatusTextView);
@@ -250,6 +269,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBtnLand.setOnClickListener(this);
         mBtnLeft.setOnClickListener(this);
         mBtnRight.setOnClickListener(this);
+        mBtnUp.setOnClickListener(this);
+        mBtnDown.setOnClickListener(this);
 
         mBtnSimulator.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -422,6 +443,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.btn_right:
                 sendCommand(0, 0.5f, 0, 0, 1);
+                break;
+            case R.id.btn_up:
+                sendCommand(0, 0, 0, -1, 1);
+                break;
+            case R.id.btn_down:
+                sendCommand(0, 0, 0, 1, 1);
                 break;
 
             default:

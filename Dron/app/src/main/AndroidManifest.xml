@@ -35,11 +35,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
+        <!-- DJI SDK -->
         <uses-library android:name="com.android.future.usb.accessory" />
         <meta-data
             android:name="com.dji.sdk.API_KEY"
-            android:value="Please enter your App Key here." />
+            android:value="20b2b1d75b824e014dd6ae0a" />
         <activity
             android:name="dji.sdk.sdkmanager.DJIAoaControllerActivity"
             android:theme="@android:style/Theme.Translucent" >
@@ -52,6 +52,7 @@
         </activity>
         <service android:name="dji.sdk.sdkmanager.DJIGlobalService" >
         </service>
+        <!-- DJI SDK -->
 
         <activity android:name=".MainActivity">
             <intent-filter>

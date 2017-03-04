@@ -23,14 +23,17 @@ public abstract class AbstractDao<T> {
     private static final long serialVersionUID = 1L;
 
     private String connectionString;
-
+    /**
+     * Pouze pro insert update delete
+     * @param sqlQuery 
+     */
     void commitSQL(String sqlQuery) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
-            connection = getConnection();
-            preparedStatement = connection.prepareStatement(sqlQuery);
-            ResultSet resultSet = preparedStatement.executeQuery();
+            connection = getConnection();            
+            preparedStatement = connection.prepareStatement(sqlQuery);            
+            preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -77,5 +80,5 @@ public abstract class AbstractDao<T> {
         }
     }
 
-    public abstract void save(IPersistableEntry p);
+   // public abstract void save(IPersistableEntry p);
 }

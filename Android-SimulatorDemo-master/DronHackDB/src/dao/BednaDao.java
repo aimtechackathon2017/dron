@@ -72,18 +72,36 @@ public class BednaDao extends AbstractDao {
         return getBedny("SELECT * FROM Materialy WHERE Materialy.id = " + material.getId());
     }
 
-    @Override
-    public void save(IPersistableEntry p) {
-        if (p instanceof Bedna) {
-            Bedna b = (Bedna) p;
-            Context.bednaDao.commitSQL(
-                    "INSERT INTO Bedny (id, poziceID, materialID, mnozstvi) VALUES ("
-                    + b.getBednaId() + ", "
+    public boolean CheckBednaValid(Bedna b) {
+
+        List<Pozice> pozice = Context.poziceDao.getPozice();
+
+        if (pozice == null) {
+            return false; // musí být známá pozice bedny
+        }
+        for (Pozice p : pozice) {
+            if (p.getPoziceId() == b.getPozice().getPoziceId()) {  // 0:1 
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public boolean save(Bedna b) {
+        boolean r = CheckBednaValid(b);
+        if (r) {
+            commitSQL(
+                    "INSERT INTO Bedny (poziceID, materialID, mnozstvi) VALUES ("
                     + b.getPozice().getPoziceId() + ", "
                     + b.getMaterial().getId() + ", "
                     + " 1)"
             );
+        } else {
+            return false;
         }
+        return true;
+
     }
 
 }

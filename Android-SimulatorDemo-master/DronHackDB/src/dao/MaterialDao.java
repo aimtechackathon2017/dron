@@ -59,16 +59,16 @@ public class MaterialDao extends AbstractDao {
         return null;
     }
 
-    @Override    
-    public void save(IPersistableEntry p) {
-        if (p instanceof Material) {
-            Material m = (Material)p;
-            Context.materialDao.commitSQL(
-                    "INSERT INTO Materialy (id, nazev) VALUES ("
-                    + m.getId() + ", "
-                    + m.getNazev() + ")"
-            );
-        }
+    public void save(Material m) {
+        System.out.println(   
+                                "INSERT INTO Materialy (id, nazev) VALUES ("
+                + m.getId() + ", \""
+                + m.getNazev() + "\")"
+        );
+        Context.materialDao.commitSQL(
+                "INSERT INTO Materialy (nazev) VALUES ('"
+                + m.getNazev() + "')"
+        );
     }
-
 }
+

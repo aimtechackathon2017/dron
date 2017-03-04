@@ -59,18 +59,14 @@ public class PoziceDao extends AbstractDao {
         return pozices;
     }
 
-    @Override
-    public void save(IPersistableEntry p) {
-        if (p instanceof Pozice) {
-            Pozice poz = (Pozice) p;
-            Context.poziceDao.commitSQL(
-                    "INSERT INTO Pozice (id, XY, x, y, z) VALUES ("
-                    + poz.getPoziceId() + ", "
-                    + poz.getXY() + ", "
-                    + poz.getX() + ", "
-                    + poz.getY() + ", "
-                    + poz.getZ() + ")"
-            );
-        }
+    public void save(Pozice poz) {
+        commitSQL(
+                "INSERT INTO Pozice (XY, x, y, z) VALUES ("
+                + poz.getXY() + ", "
+                + poz.getX() + ", "
+                + poz.getY() + ", "
+                + poz.getZ() + ")"
+        );
     }
+
 }

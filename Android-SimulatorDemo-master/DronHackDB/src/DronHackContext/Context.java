@@ -16,6 +16,7 @@ public class Context {
     public static BednaDao bednaDao;
     public static MaterialDao materialDao;
     public static PoziceDao poziceDao;
+    public static SensorDataDao sensorDataDao;
 
     
     
@@ -23,9 +24,10 @@ public class Context {
         bednaDao = new BednaDao(serverUrl, port, databaseName, user, password);
         materialDao = new MaterialDao(serverUrl, port, databaseName, user, password);
         poziceDao = new PoziceDao(serverUrl, port, databaseName, user, password);
+        sensorDataDao = new SensorDataDao(serverUrl, port, databaseName, user, password);
     }
 
-    public Context(String dronhackdatabasewindowsnet, int i, String sqladmindronhack, String abcDEF1234) {
+    /*public Context(String dronhackdatabasewindowsnet, int i, String sqladmindronhack, String abcDEF1234) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 }

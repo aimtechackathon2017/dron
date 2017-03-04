@@ -7,3 +7,6 @@
 /build
 /captures
 .externalNativeBuild
+.idea/atlassian-ide-plugin.xml
+*/vcs.xml
+/dJISDKLIB/build/
